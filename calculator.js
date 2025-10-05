@@ -25,13 +25,13 @@ function updateResults() {
     } else {
         occupancyResults.textContent = "0.00%"
     }
-
+    // Display ADR, check for division by zero
     if (roomsSold.value > 0){
         adrResults.textContent = "$" + ((revVal / 100) / roomsSold.value).toFixed(2);
     } else {
         adrResults.textContent = "$0.00";
     }
-
+    // Display PAR, check for division by zero
     if (roomsAvailable.value > 0){
         revPARResults.textContent = "$" + ((revVal / 100) / roomsAvailable.value).toFixed(2);
     } else {
