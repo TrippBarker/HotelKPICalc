@@ -16,15 +16,15 @@
         <div id="form">
             <div class="input">
                 <p class="label">Total Rooms Available</p>
-                <input class="userIn" type="text" name="roomsAvailable" id="roomsAvailable" placeholder="0" inputmode="numeric" autocomplete="off">
+                <input class="userIn numOnly" type="text" min="0" name="roomsAvailable" id="roomsAvailable" placeholder="0" inputmode="numeric" autocomplete="off">
             </div>
             <div class="input">
                 <p class="label">Rooms Sold</p>
-                <input class="userIn" type="text" name="roomsSold" id="roomsSold" placeholder="0" inputmode="numeric" autocomplete="off">
+                <input class="userIn numOnly" type="text" min="0" name="roomsSold" id="roomsSold" placeholder="0" inputmode="numeric" autocomplete="off">
             </div>
             <div class="input">
                 <p class="label">Total Room Revenue</p>
-                <input class="userIn" type="text" name="revenue" id="revenueIn" placeholder="$0.00">
+                <input class="userIn moneyOnly" type="text" name="revenue" id="revenueIn" placeholder="$0.00">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="input">
                 <p class="label">Revenue Per Available Room (RevPAR)</p>
-                <p class="results" id="revPARResults">$0.00</p>
+                <p class="results" id="revPARResult">$0.00</p>
             </div>
         </div>
     </div>
