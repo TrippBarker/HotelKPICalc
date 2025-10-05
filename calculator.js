@@ -7,6 +7,8 @@ const revenueIn = document.getElementById("revenueIn");
 const occupancyResults = document.getElementById("occpancyResult");
 const adrResults = document.getElementById("adrResult");
 const revPARResults = document.getElementById("revPARResult");
+const occDisp = document.getElementById("occGraphDisp");
+const occGraph = document.getElementById("occGraph");
 
 function updateResults() {
     // Remove all letters in form inputes with regex
@@ -18,6 +20,8 @@ function updateResults() {
     // Display the occupancy results, check for division by zero
     if (Number(roomsAvailable.value) > 0){
         occupancyResults.textContent = (roomsSold.value / roomsAvailable.value * 100).toFixed(2) + "%";
+        occDisp.textContent = (roomsSold.value / roomsAvailable.value * 100).toFixed(0) + "%";
+        occGraph.style.setProperty("--percent", (roomsSold.value / roomsAvailable.value * 100).toFixed(0));
     } else {
         occupancyResults.textContent = "0.00%"
     }

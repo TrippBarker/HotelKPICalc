@@ -8,40 +8,51 @@
 </head>
 <body>
     <header>
-        <h1>HOTEL KPI CALCULATOR</h1>
+        <h1>Hotel KPI Calculator</h1>
+        <h2>Enter your values and see KPIs update instantly.</h2>
     </header>
-    <div class="container">
-        <h2>Enter Values Below</h2>
-        <p><em>(calculation will update automatically)</em></p>
-        <div id="form">
-            <div class="input">
-                <p class="label">Total Rooms Available</p>
-                <input class="userIn numOnly" type="text" min="0" name="roomsAvailable" id="roomsAvailable" placeholder="0" inputmode="numeric" autocomplete="off">
-            </div>
-            <div class="input">
-                <p class="label">Rooms Sold</p>
-                <input class="userIn numOnly" type="text" min="0" name="roomsSold" id="roomsSold" placeholder="0" inputmode="numeric" autocomplete="off">
-            </div>
-            <div class="input">
-                <p class="label">Total Room Revenue</p>
-                <input class="userIn moneyOnly" type="text" name="revenue" id="revenueIn" placeholder="$0.00">
+    <div id="main">
+        <div class="container">
+            <h2>Enter Values Below</h2>
+            <div id="form">
+                <div class="input">
+                    <p class="label">Total Rooms Available</p>
+                    <input class="userIn numOnly" type="text" min="0" name="roomsAvailable" id="roomsAvailable" placeholder="0" inputmode="numeric" autocomplete="off">
+                </div>
+                <div class="input">
+                    <p class="label">Rooms Sold</p>
+                    <input class="userIn numOnly" type="text" min="0" name="roomsSold" id="roomsSold" placeholder="0" inputmode="numeric" autocomplete="off">
+                </div>
+                <div class="input">
+                    <p class="label">Total Room Revenue</p>
+                    <input class="userIn moneyOnly" type="text" name="revenue" id="revenueIn" placeholder="$0.00">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <h2>Key Performance Indicators</h2>
-        <div id="results">
-            <div class="input">
-                <p class="label">Occupancy</p>
-                <p class="results" id="occpancyResult">0.00%</p>
-            </div>
-            <div class="input">
-                <p class="label">Average Daily Rate (ADR)</p>
-                <p class="results" id="adrResult">$0.00</p>
-            </div>
-            <div class="input">
-                <p class="label">Revenue Per Available Room (RevPAR)</p>
-                <p class="results" id="revPARResult">$0.00</p>
+        <div class="container">
+            <h2>Key Performance Indicators</h2>
+            <div id="results">
+                <div id="occContainer">
+                    <div class="occGraphCont">
+                        <div id="occGraph">
+                            <div class="occGraphVal">
+                                <p id="occGraphDisp">0%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <p class="label">Occupancy</p>
+                        <p class="results" id="occpancyResult">0.00%</p>
+                    </div> 
+                </div>
+                <div class="input">
+                    <p class="label">Average Daily Rate (ADR)</p>
+                    <p class="results" id="adrResult">$0.00</p>
+                </div>
+                <div class="input">
+                    <p class="label">Revenue Per Available Room (RevPAR)</p>
+                    <p class="results" id="revPARResult">$0.00</p>
+                </div>
             </div>
         </div>
     </div>
